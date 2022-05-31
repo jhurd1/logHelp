@@ -1,6 +1,5 @@
 import axios from "axios";
 import React from 'react';
-import TakeInput from "./TakeInput";
 
 // Because Flask should use port 3000, React 5000
 // and we are 'posting' to Flask.
