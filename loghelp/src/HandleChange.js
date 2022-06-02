@@ -25,4 +25,4 @@ function handleChange(e){
     })
 };
 
-export default handleChange;
+export {handleChange};
