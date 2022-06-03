@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './SCSS/index.css';
 import ServiceUser from "./ServiceUser";
-import { useState } from 'react';
 
 // shouldn't need react hook since classes are supposed to do the same thing
 export class TakeInput extends React.Component{
@@ -28,7 +27,7 @@ export class TakeInput extends React.Component{
     handleChange=(e)=>{
 
         //current value of the user
-        const user = this.state.user;
+        const user = this.state.User;
 
         //extract value of input embodied in 'target'
         const modifiedPath = e.target.fpath;
@@ -51,25 +50,13 @@ export class TakeInput extends React.Component{
 
     handleSubmit = (event) => {
         event.preventDefault();
-        const [currentUser, setCurrentUser] = useState(0);
+        
         const response = ServiceUser.createUsers().then(response =>
         {
             console.log(response)
         }).catch(error=> {
             console.log(error)
         })
-
-        function useEffect((user) => {
-            postMessage('/user').then((response) => response.json()).then((user) =>{
-                setCurrentUser(user.fpath, user.searchStrings, user.anonymize);
-            });
-        },[]);
-
-        useEffect(response.user)
-        localStorage.setItem('user', response.user)
-        console.log(response.user)
-
-
     };
 
     render()

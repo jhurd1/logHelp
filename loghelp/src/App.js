@@ -1,13 +1,13 @@
-import React from 'react';
-import TakeInput from './TakeInput';
+import React, {useEffect} from 'react';
+import './SCSS/index.css';
+import TakeInput from "./TakeInput";
 
-// The technical PARENT COMPONENT of all other components in a React app.
 function App() {
     return (
-     <div>
-         <TakeInput/>
-     </div>
-  );
+        <div className="TakeInput">
+            <TakeInput/>
+        </div>
+    );
 }
 
 export default App;
