@@ -5,7 +5,6 @@ from flask import request
 from flask_cors import CORS
 from Manage import Manage
 
-
 app = Flask(__name__, static_url_path='', static_folder='/loghelp/public')
 CORS(app)
 api = Api(app)

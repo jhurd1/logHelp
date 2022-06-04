@@ -10,9 +10,11 @@ class Manage(Resource):
   def post(self):
     print(self)
     parser = reqparse.RequestParser()
-    parser.add_argument('fpath', action='append', location='form', type=str, required=True, help='fpath must be a file path or the json isn\'t working')
-    parser.add_argument('searchStrings', action='append', location='form', type=str, required=True, help='the searchStrings must be strings or the json isn\t working')
-    parser.add_argument('anonymize', type=bool, help='Did you remember to select anonymize?')
+    #parser.add_argument('fpath', action='append', location='form', type=str, required=True, help='fpath must be a file path or the json isn\'t working')
+    #parser.add_argument('searchStrings', action='append', location='form', type=str, required=True, help='the searchStrings must be strings or the json isn\t working')
+    #parser.add_argument('anonymize', type=bool, help='Did you remember to select anonymize?')
+    parser.add_argument('type', type=str)
+    parser.add_argument('message', type=str)
     {
         "message":
         {
