@@ -51,3 +51,9 @@
     
 11. A tidbit from the documentation on parser in flask_restful.
     https://flask-restful.readthedocs.io/en/latest/reqparse.html
+
+12. This is a little confounding as I see the CORS error pop up again despite the proxy setting in package.json and the CORS configuration
+    hard-coded into the Python.
+    https://www.telerik.com/blogs/dealing-with-cors-in-create-react-app
+    I don't know if I need to call something in the setupProxy.js file because the way the article explains it,
+    I don't see a function at all or a useEffect or hook.
