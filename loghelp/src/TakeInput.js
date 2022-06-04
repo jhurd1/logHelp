@@ -27,7 +27,7 @@ export class TakeInput extends React.Component{
     handleChange=(e)=>{
 
         //current value of the user
-        const user = this.state.User;
+        const user = this.state.user;
 
         //extract value of input embodied in 'target'
         const modifiedPath = e.target.fpath;

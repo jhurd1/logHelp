@@ -1,0 +1,51 @@
+1. https://upmostly.com/tutorials/how-to-post-requests-react
+    What is the difference between PUT and POST?
+    PUT modifies data. POST saves it in the backend.
+
+2. Why does react create index.js and app.js?
+    https://stackoverflow.com/questions/50493069/why-does-create-react-app-creates-both-app-js-and-index-js
+    "index.js is the traditional [ENTRY POINT]."
+
+    "App.js on the other hand [merely functions as the FIRST COMPONENT] of the react app because every view and component are handled with hierarchy in React,
+     where <App /> is the top most component in the hierarchy. This gives you the feel that you maintain hierarchy in your code starting from 
+     App.js."
+
+3. Do I need to use classes in React anymore?
+    No. According to the authority below, 'hooks' remain the modern preference above classes for structuring your React app.
+    https://www.w3schools.com/react/react_class.asp
+    "With the addition of Hooks, Function components are now almost equivalent to Class components. The differences are so minor that you will 
+    probably never need to use a Class component in React.
+    Even though Function components are preferred, there are no current plans on removing Class components from React."
+
+4. How does one implement Axios content in React?
+    https://www.freecodecamp.org/news/how-to-use-axios-with-react/
+    
+5. The following error rears its ugly head once again:
+    "webpack < 5 used to include polyfills for node.js core modules by default.
+    This is no longer the case. Verify if you need this module and configure a polyfill for it."
+
+    https://stackoverflow.com/questions/46239109/axios-version-package-json
+    You may need to uninstall axios first, but the command "npm install axios@0.26.1" seemed to fix it for me.
+
+6. This is for later: Integrate POSTGRESQL with FLASK:
+    https://www.digitalocean.com/community/tutorials/how-to-use-a-postgresql-database-in-a-flask-application
+
+7. I capitalized the user object in the constructor for the takeinput class. It caused an error on lines 74+ because
+    the interpreter/compiler could no longer recognize the user object. Object naming conventions appear to be 
+    case sensitive in react.
+
+8. I'm testing a different author's method for help in connecting the React to the Flask.
+    https://dev.to/dev_elie/connecting-a-react-frontend-to-a-flask-backend-h1o
+
+    I don't want to connect in the way the above other shows. I want to connect to my existing postgresql database.
+    https://www.geeksforgeeks.org/connecting-postgresql-with-sqlalchemy-in-python/
+    This is where the Hibernate got really hairy. I'm hoping to keep this as simple as possible, for now.
+
+9. What is Flask SQLAlchemy?
+    https://pythonbasics.org/flask-sqlalchemy/
+    It's another ORM for supposedly assisting with managing SQL queries and databases (equivalent to Spring's Hibernate).
+    I'm done with "helpers" right now. I need to simplify this stuff and worry about adding complexity later.
+
+10. I'm testing this young lady's code with mine to see if I can get the JSON to work.
+    https://towardsdatascience.com/build-deploy-a-react-flask-app-47a89a5d17d9
+    
