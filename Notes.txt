@@ -49,3 +49,5 @@
 10. I'm testing this young lady's code with mine to see if I can get the JSON to work.
     https://towardsdatascience.com/build-deploy-a-react-flask-app-47a89a5d17d9
     
+11. A tidbit from the documentation on parser in flask_restful.
+    https://flask-restful.readthedocs.io/en/latest/reqparse.html
