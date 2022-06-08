@@ -2,9 +2,37 @@ import React, {useEffect, useState} from 'react';
 //import './SCSS/index.css';
 //import logo from './logo.svg'
 //import './App.css'
-import axios from 'axios'
-import setupProxy from './setupProxy';
+//import axios from 'axios'
+//import setupProxy from './setupProxy';
 //import TakeInput from "./TakeInput";
+
+function App()
+{
+  const [data, setData] = useState([{}])
+
+  useEffect(() => {
+    fetch("/members").then(
+      res => res.json()
+    ).then(
+      data => {
+        setData(data)
+        console.log(data)
+      }
+    )
+  }, [])
+
+  return (
+    <div>
+      {(typeof data.members === 'undefined') ? (
+        <p>Loading...</p>
+      ) : (
+        data.members.map((member, i) => (
+          <p key={i}>{member}</p>
+        ))
+      )}
+    </div>
+  )
+}
 
 /*function App() {
     return (
@@ -14,7 +42,7 @@ import setupProxy from './setupProxy';
     );
 }*/
 
-function App() {
+/*function App() {
     const [getMessage, setGetMessage] = useState({})
   
     useEffect(()=>{
@@ -38,6 +66,6 @@ function App() {
         </header>
       </div>
     );
-  }
+  }*/
 
 export default App;

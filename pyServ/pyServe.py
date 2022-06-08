@@ -5,15 +5,21 @@ from flask import request
 from flask_cors import CORS
 from Manage import Manage
 
-app = Flask(__name__, static_url_path='', static_folder='/loghelp/public')
-CORS(app)
-api = Api(app)
+#app = Flask(__name__, static_url_path='', static_folder='/loghelp/public')
+#CORS(app)
+#api = Api(app)
+
+app = Flask(__name__)
+
+@app.route("/members")
+def members():
+    return{"members": ["Member1", "Member2", "Member3"]}
 
 if __name__ == '__main__':
     app.run(debug=True)
 
-@app.route('/', defaults={'path':''})
-def serve(path):
-    return send_from_directory(app.static_folder, 'index.html')
+#@app.route('/', defaults={'path':''})
+#def serve(path):
+#    return send_from_directory(app.static_folder, 'index.html')
 
-api.add_resource(Manage, '/')
+#api.add_resource(Manage, '/')
