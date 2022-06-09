@@ -57,3 +57,32 @@
     https://www.telerik.com/blogs/dealing-with-cors-in-create-react-app
     I don't know if I need to call something in the setupProxy.js file because the way the article explains it,
     I don't see a function at all or a useEffect or hook.
+
+13. I opened the author's code after downloading it from GitHub to see what would happen--for comparison and contrast.
+    Her app runs in my browser such that I can see the interface but the same CORS error appears despite her configuration, too.
+
+14. When I test the "flask run" command, I receive an error indicating I haven't set the flask environment variable on the machine and that the app.python
+    module is missing. I thought I resolved this earlier today, but I"m still seeing the error.
+    A run of the "echo $FLASK_APP" command shows pyServe.py as the environment variable, but I think there needs to be a root level path
+    reflected.
+
+15. Based on the following video and other articles or videos I've watched on this subject, and based on my own challenges with getting JSON
+    to pass between the front and back end, I think I need to make my code more basic first before I try to pass in user input. I need to only
+    test further the passing of data between the frontend and the backend.
+    https://www.youtube.com/watch?v=7LNl2JlZKHA&t=3s&ab_channel=ArpanNeupane
+    Afterward, I can try again to use the user input as the data to pass to the backend.
+
+    See also: https://www.youtube.com/watch?v=cb1vy1HpVwk&ab_channel=THESHOW
+
+16. Naturally, as if from nowhere, a new and bizarre issue is blocking access from Flask and React in the Chrome browser.
+    https://stackoverflow.com/questions/67191286/crbug-1173575-non-js-module-files-deprecated-chromewebdata-index%EA%9E%89530595551
+    I tried several things listed here, but so far no dice.
+    https://stackoverflow.com/questions/67495792/where-is-the-launch-json-file-in-vs-code
+    I'm not interested right now in asking VSCode to create a launch.json. If it doesn't exist yet, it can't that that's the problem here.
+
+    Without explanation, the Flask end just connected on 127.0.0.1:5000/members. What on earth!?
+
+    I recorded a HAR while resetting the React page connection. "react connection refused blocked" are some strings I put together from the HAR,
+    which I saved to the desktop for now.
+
+    I may try a Fiddler file or Wireshark tomorrow. This is freakin' asinine!
