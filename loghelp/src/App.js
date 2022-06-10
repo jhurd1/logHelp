@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import UserDataTest from './UserDataTest';
+import {UserDataTest} from './UserDataTest';
 
 function App() {
     return (

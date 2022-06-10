@@ -1,14 +1,24 @@
 import React from "react";
-//import "./App.css";
+import { userDataTest } from "./data";
+import "./App.css";
 
 export const UserDataTest = () => {
     return (
-        <>
-            <div className="test-container"> 
-                Welcome to the User Data Test Tracker
+      <>
+        <div className="test-container">
+          {userDataTest.map((data, key) => {
+            return (
+                <div key={key}>
+                {data.filepath +
+                " , " + 
+                data.searchStrings}
             </div>
-        </>
+            );
+          })}
+        </div>
+      </>
     );
-};
+  };
+  
 
 export default UserDataTest

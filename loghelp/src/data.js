@@ -1,6 +1,6 @@
 export const userDataTest = [
     {
-        filepath: "",
-        searchStrings: ""
+        filepath: "/Users/jamiehurd/desktop",
+        searchStrings: "error"
     }
 ]
