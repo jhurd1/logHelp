@@ -95,3 +95,20 @@
 
     There's an import I had configured in index.js that read: "import ReactDOM from 'react-dom/client';" I changed it to reflect that of the 
     video I've been following (above): "import ReactDOM from 'react-dom';" and finally, the frontend renders the test data from Python!
+
+    I now have a warning showing in Chrome: "react-dom.development.js:86 Warning: ReactDOM.render is no longer supported in React 18. Use
+     createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more:
+      https://reactjs.org/link/switch-to-createroot".
+
+18. While it's a great goal, I may need to begin with a static file of JSON data rather than trying to pass in user input from the 
+    webpage at first.
+    https://www.pluralsight.com/guides/load-and-render-json-data-into-react-components
+    I don't care to display the data in the upcoming test, but it may not hurt to practice. I'll cross that bridge as I encounter it.
+    For that matter, my own goals entail passing in user search strings and a file path, searching the directory (and subdirectories), and 
+    returning results in a file or group of files (depending on size).
+    For purposes of this test, I won't take user input, as stated. I'll save that for later. I'll just create two json objects and see if I 
+    can either display those or pass them from React to Flask.
+
+    The above tutorial has worked so far, though I needed to reorder the file imports because it wouldn't render. Namely, I needed to export
+    UserDataTest.js rather than importing App.js into UserDatatTest.js. Specifically, App.js remains a parent to UserDataTest and the entire
+    project, while index.js remains the top level or root file of my project.
