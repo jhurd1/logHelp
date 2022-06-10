@@ -86,3 +86,12 @@
     which I saved to the desktop for now.
 
     I may try a Fiddler file or Wireshark tomorrow. This is freakin' asinine!
+
+17. I caught a Wireshark capture with the loopback and eth0 enabled for capture. Before I turn to that for further analysis, I see that 
+    my backend (Python) shows it's functioning but the React side isn't. I didn't see why until I navigated away from the devtools 
+    network tab to the console.
+
+    Uncaught type error: react_dom_client_webpack...render is not a function at ./src/index.js.
+
+    There's an import I had configured in index.js that read: "import ReactDOM from 'react-dom/client';" I changed it to reflect that of the 
+    video I've been following (above): "import ReactDOM from 'react-dom';" and finally, the frontend renders the test data from Python!
