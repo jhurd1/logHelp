@@ -1,25 +1,18 @@
-from flask import Flask#, send_from_directory
-#from flask_restful import Api, Resource, reqparse
-#from flask import request
-#from flask import jsonify
-#from flask_cors import CORS
-#from Manage import Manage
+from flask import Flask, request
+from flask_sqlalchemy import SQLAlchemy
+import sqlalchemy
+import Data
 
-#app = Flask(__name__, static_url_path='', static_folder='/loghelp/public')
-#CORS(app)
-#api = Api(app)
-
+db = sqlalchemy
 app = Flask(__name__)
 
-@app.route("/members")
-def members():
-    return{"members": ["Member1", "Member2", "Member3"]}
+@app.route('/data', methods=['POST'])
+def data():
+    data = request.get_json()
+    new_data = Data(content=data['content'])
+    db.session.add(new_data)
+    db.session.commit()
+    return 'Done', 201
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-#@app.route('/', defaults={'path':''})
-#def serve(path):
-#    return send_from_directory(app.static_folder, 'index.html')
-
-#api.add_resource(Manage, '/')

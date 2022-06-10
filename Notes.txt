@@ -112,3 +112,10 @@
     The above tutorial has worked so far, though I needed to reorder the file imports because it wouldn't render. Namely, I needed to export
     UserDataTest.js rather than importing App.js into UserDatatTest.js. Specifically, App.js remains a parent to UserDataTest and the entire
     project, while index.js remains the top level or root file of my project.
+
+19. While the last effort proved seemingly fruitless (it didn't do what I expected), I learned about displaying json in react and, equally
+    important, how to manage some json therein. I found the following link, which I hope will help me send that json to Flask.
+    https://javascript.plainenglish.io/sending-a-post-to-your-flask-api-from-a-react-js-app-6496692514e
+
+    The above link contains the presentment in both the URL and the text of the article of plainness, but it isn't plain at all. The author
+    explicitly targest new coders but leaves readers scrambling to find basic imports used in the code and which the author did not show.
