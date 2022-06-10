@@ -5,12 +5,11 @@ function testData(){
     const [content, setContent] = useState([{}]);
 
     return (
-        <>
-            <div>
                <form>
                     <input type="text" value={content} onChange={e =>
                     setContent(e.target.value)}/>
-                        <button type="submit" value = "Add Data" onClick={async() => {
+                        <button type="submit" value = "Add Data" onClick = {
+                            async() => {
                             const data = {content};
                             const response = await fetch("/data", {
                                 method = "POST",
@@ -25,7 +24,5 @@ function testData(){
                         }>
                 </button>
                </form>
-            </div>
-        </>
     )
 }
