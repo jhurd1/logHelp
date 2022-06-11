@@ -134,4 +134,6 @@
 
     I found another reference in this set of articles: https://www.youtube.com/watch?v=msEmUtYqVV0&ab_channel=ParwizForogh
 
-21. 
+21. Let's try this again, more simplified to begin with.
+    https://stackoverflow.com/questions/62824117/how-to-send-data-from-react-to-flask-then-back-to-react-and-show-output-on-dom
+    
