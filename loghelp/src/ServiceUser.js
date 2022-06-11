@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class APIService{
+export default class ServiceUser{
     // Insert an article
     static async InsertData(searchStrings){
         try {

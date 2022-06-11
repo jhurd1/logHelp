@@ -1,16 +1,19 @@
 from flask import Flask, request
 from flask_sqlalchemy import SQLAlchemy
 import sqlalchemy
+from OtherData import OtherData, data_schema
+
+#equivalent to the routes.py file in the example project
 
 db = sqlalchemy
 app = Flask(__name__)
 
 @app.route('/data', methods=['POST'])
-def data():
+def add_data():
     fpath = request.json['fpath']
     searchStrings = request.json['searchStrings']
 
-    data = data (
+    data = OtherData (
         fpath = fpath,
         searchStrings = searchStrings
     )

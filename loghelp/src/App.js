@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import TakeInput from './TakeInput';
 
 const insertData = (data) => {
-    const new_data = [...preexistingData, data]
+    const new_data = [...OtherData, data]
     setData(new_data)
 }
 
@@ -10,7 +10,7 @@ const insertData = (data) => {
 function App() {
     return (
         <div className="TakeInput">
-            <TakeInput/>
+            <TakeInput insertData={insertData}/>
         </div>
     );
 }

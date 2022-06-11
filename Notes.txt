@@ -125,3 +125,5 @@
 
 20. Testing this one:
     https://dev.to/dev_elie/sending-data-from-react-to-flask-apm
+    Predicate to the above link comprises the other half of the project. I went to the Github repo and downloaded the code
+    with the intent of using it as a pattern for testing my own code. Fingers crossed!
