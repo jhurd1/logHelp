@@ -118,4 +118,10 @@
     https://javascript.plainenglish.io/sending-a-post-to-your-flask-api-from-a-react-js-app-6496692514e
 
     The above link contains the presentment in both the URL and the text of the article of plainness, but it isn't plain at all. The author
-    explicitly targest new coders but leaves readers scrambling to find basic imports used in the code and which the author did not show.
+    explicitly targest new coders but leaves readers scrambling to find basic imports used in the code and which the author did not show. 
+    Furthermore, the code has errors in it and therefore it appears the author suffers from a confidence problem twofold.
+
+    Moving on.
+
+20. Testing this one:
+    https://dev.to/dev_elie/sending-data-from-react-to-flask-apm

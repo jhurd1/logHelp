@@ -2,8 +2,47 @@ import React, {useState, useEffect} from 'react';
 import './SCSS/index.css';
 import ServiceUser from "./ServiceUser";
 
+
+const Form = (props) => {
+    const [fpath, setPath] = useState('')
+    const [searchStrings, setStrings] = useState('')
+    const insertData = () => {
+        ServiceUser.InsertData({fpath, searchStrings})
+        .then((response) => props.insertData(response))
+        .catch(error => console.log('error', error))
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        insertData()
+        setPath('')
+        setStrings('')
+    }
+
+    return (
+        <div>
+                <form className={"grid_layout"} onSubmit={this.handleSubmit}>
+                    <p className={"heading"}>Welcome to your web-app log helper tool!</p>
+                    <p className={"appDescription"}>LogHelper is designed to assist in the sharing and anonymization of log data using
+                        an automated process for replacing names, IP addresses, Mac addresses, and other
+                        sensitive data for the exchange of said data during troubleshooting and case
+                        management.</p>
+                    <div className={"center"}>
+                        <label>Enter your path and search strings here:<br/><br/>
+                            <input type="text" value={fpath} onChange={(e)=>setPath(e.target.value)} placeholder="file path"/>
+                            <input type="text" value={searchStrings} onChange={(e)=>setStrings(e.target.value)} placeholder="search strings" />
+                            <button onClick={this.handleSubmit.bind(this)}>{'Search'}</button>
+                        </label>
+                        <br/>
+                    </div>
+                </form>
+
+            </div>
+    )
+ }
+
 // shouldn't need react hook since classes are supposed to do the same thing
-export class TakeInput extends React.Component{
+/*export class TakeInput extends React.Component{
 
     // constructor properties or "props" permits passing default values to callers
     constructor(props)
@@ -88,5 +127,5 @@ export class TakeInput extends React.Component{
             </div>
         );
     }
-}
+}*/
 export default TakeInput;
