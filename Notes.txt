@@ -127,3 +127,11 @@
     https://dev.to/dev_elie/sending-data-from-react-to-flask-apm
     Predicate to the above link comprises the other half of the project. I went to the Github repo and downloaded the code
     with the intent of using it as a pattern for testing my own code. Fingers crossed!
+    The example code repository: https://github.com/Dev-Elie/Connecting-React-Frontend-to-a-Flask-Backend
+
+    As I review the code as downloaded from GitHub, I see some of the code showed in the tutorial is not in the repository, including the
+    Form.js file. Elements also prove missing from the App.js shown in the article.
+
+    I found another reference in this set of articles: https://www.youtube.com/watch?v=msEmUtYqVV0&ab_channel=ParwizForogh
+
+21. 

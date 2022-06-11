@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react';
 import './SCSS/index.css';
 import ServiceUser from "./ServiceUser";
 
-
+// Reflects Form.js in the example code
+function TakeInput(){
 const Form = (props) => {
     const [fpath, setPath] = useState('')
     const [searchStrings, setStrings] = useState('')
@@ -40,6 +41,7 @@ const Form = (props) => {
             </div>
     )
  }
+}
 
 // shouldn't need react hook since classes are supposed to do the same thing
 /*export class TakeInput extends React.Component{

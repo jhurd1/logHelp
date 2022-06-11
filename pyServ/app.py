@@ -16,7 +16,7 @@ cors = CORS()
 def create_app():
     """Application-factory pattern"""
     app = Flask(__name__)
-    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://user:pass@localhost:5432/my_db"
+    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://admin:test@localhost:5432/logHelp3"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # Initialize extensions
