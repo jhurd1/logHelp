@@ -143,7 +143,12 @@
 
 23. https://stackoverflow.com/questions/43556212/failed-form-proptype-you-provided-a-value-prop-to-a-form-field-without-an-on
     Warning: You provided a `value` prop to a form field without an `onChange` handler.
+    Removing the value property from the input jsx tag in the return statement on app.js resolved the warning.
 
 24. https://stackoverflow.com/questions/26069238/call-multiple-functions-onclick-reactjs
     How to use two different setters within a single button in JSX (React).
     
+25. I'm returning to the concept of taking user input because I'm getting an error about null input when trying to
+    test the sendData. It seems like it might be just as easy to do this as it will be send static data back to
+    Flask, which I've already proven I can do once before.
+    https://ibaslogic.com/simple-guide-to-react-form/

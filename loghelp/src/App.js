@@ -6,11 +6,6 @@ import './SCSS/index.css';
 function App() {
     const [fpath, setPath] = useState("");
     const [searchStrings, setStrings] = useState("");
-    /*let sendData = (props) => {
-        return (
-        props.fpath,
-        props.searchStrings
-    );};*/
 
     let sendData = (e) => {
         e.preventDefault();
@@ -22,8 +17,19 @@ function App() {
         });
     }
 
+    // original is commented out in takeinput for second version control option
+    const handleChange = (e) => {
+        setPath(e.target.value)
+        setStrings(e.target.value)
+        const modPath = e.target.fpath;
+        const modStrings = e.target.searchStrings;
+        // test console.log for debugging
+        console.log(e);
+        }
+    
+
     return (
-                <form className={"grid_layout"} onChange={e => {setPath(e.target.value); setStrings(e.target.value);}} onSubmit={sendData}>
+                <form className={"grid_layout"}>
                     <p className={"heading"}>Welcome to your web-app log helper tool!</p>
                     <p className={"appDescription"}>LogHelper is designed to assist in the sharing and anonymization of log data using
                         an automated process for replacing names, IP addresses, Mac addresses, and other
@@ -31,8 +37,8 @@ function App() {
                         management.</p>
                     <div className={"center"}>
                         <label>Enter your path and search strings here:<br/><br/>
-                            <input type="text" placeholder="file path"/>
-                            <input type="text" placeholder="search strings" />
+                            <input type="text" placeholder="file path" onChange={handleChange}/>
+                            <input type="text" placeholder="search strings" onChange={handleChange}/>
                             <button type="submit" onChange={e => {setPath(e.target.value); setStrings(e.target.value);}} onClick={()=>{setPath(""); setStrings("");}} onSubmit={sendData}>Submit</button>
                         </label>
                         <br/>
