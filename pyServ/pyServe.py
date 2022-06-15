@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/', methods=['POST'])
+@app.route('//localhost:5000', methods=['POST'])
 def add_data():
     fpath = request.json['fpath']
     searchStrings = request.json['searchStrings']

@@ -152,3 +152,7 @@
     test the sendData. It seems like it might be just as easy to do this as it will be send static data back to
     Flask, which I've already proven I can do once before.
     https://ibaslogic.com/simple-guide-to-react-form/
+    I am not sure as of this moment if I can accomplish the same thing shown in this document for multiple values
+    with a second variable for searchStrings instead of using setState and the list.
+    I read that if I want to do things the way I have them set up now, I will need a second handler function. I will
+    change the function to match the author's.

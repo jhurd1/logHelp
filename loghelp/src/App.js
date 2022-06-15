@@ -4,8 +4,10 @@ import './SCSS/index.css';
 //import TakeInput from './TakeInput';
 
 function App() {
-    const [fpath, setPath] = useState("");
-    const [searchStrings, setStrings] = useState("");
+    const [state, setState] = useState({
+        fpath:"",
+        searchStrings:""
+    });
 
     let sendData = (e) => {
         e.preventDefault();
@@ -19,14 +21,14 @@ function App() {
 
     // original is commented out in takeinput for second version control option
     const handleChange = (e) => {
-        setPath(e.target.value)
-        setStrings(e.target.value)
-        const modPath = e.target.fpath;
-        const modStrings = e.target.searchStrings;
+        setState({
+            ...state,
+            [e.target.fpath]: e.target.value,
+            [e.target.searchStrings]: e.target.value
+        })
         // test console.log for debugging
         console.log(e);
         }
-    
 
     return (
                 <form className={"grid_layout"}>
@@ -37,9 +39,9 @@ function App() {
                         management.</p>
                     <div className={"center"}>
                         <label>Enter your path and search strings here:<br/><br/>
-                            <input type="text" placeholder="file path" onChange={handleChange}/>
-                            <input type="text" placeholder="search strings" onChange={handleChange}/>
-                            <button type="submit" onChange={e => {setPath(e.target.value); setStrings(e.target.value);}} onClick={()=>{setPath(""); setStrings("");}} onSubmit={sendData}>Submit</button>
+                            <input type="text" placeholder="file path" value={state.fpath} onChange={handleChange}/>
+                            <input type="text" placeholder="search strings" value={state.searchStrings} onChange={handleChange}/>
+                            <button type="submit" onChange={handleChange} onClick={setState} onSubmit={sendData}>Submit</button>
                         </label>
                         <br/>
                     </div>
