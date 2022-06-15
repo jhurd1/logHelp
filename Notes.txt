@@ -136,4 +136,14 @@
 
 21. Let's try this again, more simplified to begin with.
     https://stackoverflow.com/questions/62824117/how-to-send-data-from-react-to-flask-then-back-to-react-and-show-output-on-dom
+
+22. I took an hour to debug an error: sendData is assigned a value but never used. Nonsense! I could see me trying to use it
+    one or two lines below. I had it reading, "this.sendData" on the form tag line but once I removed the "this" it compiled
+    successfully.
+
+23. https://stackoverflow.com/questions/43556212/failed-form-proptype-you-provided-a-value-prop-to-a-form-field-without-an-on
+    Warning: You provided a `value` prop to a form field without an `onChange` handler.
+
+24. https://stackoverflow.com/questions/26069238/call-multiple-functions-onclick-reactjs
+    How to use two different setters within a single button in JSX (React).
     
