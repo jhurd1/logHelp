@@ -22,7 +22,7 @@ function App() {
     // original is commented out in takeinput for second version control option
     const handleChange = (e) => {
         setState({
-            ...state,
+            setState,
             [e.target.fpath]: e.target.value,
             [e.target.searchStrings]: e.target.value
         })
