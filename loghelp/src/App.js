@@ -4,10 +4,13 @@ import './SCSS/index.css';
 //import TakeInput from './TakeInput';
 
 function App() {
-    const [state, setState] = useState({
-        fpath:"",
-        searchStrings:""
-    });
+        const addSearch = () => {
+        const initialState = {
+            fpath:"",
+            searchStrings:""
+    }
+
+    //const [search, setSearch] = useState(addSearch)
 
     let sendData = (e) => {
         e.preventDefault();
@@ -21,11 +24,12 @@ function App() {
 
     // original is commented out in takeinput for second version control option
     const handleChange = (e) => {
-        setState({
-            setState,
+        setSearch(prev => ({
+            ...prev,
             [e.target.fpath]: e.target.value,
             [e.target.searchStrings]: e.target.value
-        })
+        }))
+        e.preventDefault()
         // test console.log for debugging
         console.log(e);
         }
@@ -39,15 +43,16 @@ function App() {
                         management.</p>
                     <div className={"center"}>
                         <label>Enter your path and search strings here:<br/><br/>
-                            <input type="text" placeholder="file path" value={state.fpath} onChange={handleChange}/>
-                            <input type="text" placeholder="search strings" value={state.searchStrings} onChange={handleChange}/>
-                            <button type="submit" onChange={handleChange} onClick={setState} onSubmit={sendData}>Submit</button>
+                            <input type="text" placeholder="file path" value={search.fpath} onChange={handleChange}/>
+                            <input type="text" placeholder="search strings" value={search.searchStrings} onChange={handleChange}/>
+                            <button type="submit" onChange={handleChange} onClick={setSearch} onSubmit={sendData}>Submit</button>
                         </label>
                         <br/>
                     </div>
                 </form>
 
     );
+}
 }
 
 export default App;

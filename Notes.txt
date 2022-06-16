@@ -156,3 +156,6 @@
     with a second variable for searchStrings instead of using setState and the list.
     I read that if I want to do things the way I have them set up now, I will need a second handler function. I will
     change the function to match the author's.
+
+26. Reminder: Forget about the backend. I've just noticed that the frontend requires no database persistence. Just do the 
+    input, search, overwrite, and output to file and you should be good.
