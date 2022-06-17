@@ -4,10 +4,23 @@ import './SCSS/index.css';
 //import TakeInput from './TakeInput';
 
 function App() {
-        const addSearch = () => {
-        const initialState = {
-            fpath:"",
-            searchStrings:""
+    const {fpath, searchStrings} = this.props;
+    constructor(props)
+     super(props);
+    
+     this.state = {fpath:"", searchStrings:""};
+     this.handleSubmit = this.handleSubmit.bind(this);
+    
+    
+
+    componentDidUpdate(prevProps, prevState)
+
+    componentDidUpdate(prevProps)
+    {
+        if(this.props.fpath !== prevPropsw.fpath, this.props.searchStrings !== prevProps.searchStrings)
+        {
+            this.fetchData(this.props.fpath, this.props.searchStrings);
+        }
     }
 
     //const [search, setSearch] = useState(addSearch)
@@ -35,6 +48,7 @@ function App() {
         }
 
     return (
+        <div>
                 <form className={"grid_layout"}>
                     <p className={"heading"}>Welcome to your web-app log helper tool!</p>
                     <p className={"appDescription"}>LogHelper is designed to assist in the sharing and anonymization of log data using
@@ -43,16 +57,17 @@ function App() {
                         management.</p>
                     <div className={"center"}>
                         <label>Enter your path and search strings here:<br/><br/>
-                            <input type="text" placeholder="file path" value={search.fpath} onChange={handleChange}/>
-                            <input type="text" placeholder="search strings" value={search.searchStrings} onChange={handleChange}/>
+                            <input type="text" placeholder="file path" value={setSearch.fpath} onChange={handleChange}/>
+                            <input type="text" placeholder="search strings" value={setSearch.searchStrings} onChange={handleChange}/>
                             <button type="submit" onChange={handleChange} onClick={setSearch} onSubmit={sendData}>Submit</button>
                         </label>
                         <br/>
                     </div>
                 </form>
+                </div>
 
     );
 }
-}
+
 
 export default App;
