@@ -159,3 +159,15 @@
 
 26. Reminder: Forget about the backend. I've just noticed that the frontend requires no database persistence. Just do the 
     input, search, overwrite, and output to file and you should be good.
+
+27. It looks like I can't use React to search local directories. Maybe I can call a Python script from React to do the same thing.
+    https://stackoverflow.com/questions/50782334/how-to-execute-python-scripts-from-react-js
+    Some options: Create a script that translates text into html and use the react app to search that from a browser. Too complicated.
+    Create a C++ or Java command line tool that searches files for strings and returns a text file result.
+    Try integrating this Jupyter between Python and React, but that sounds too complicated.
+    Oof! I need help. I've explained this to my professor but it's no use, so far.
+
+    School just doesn't leave much time to get anything done. I have five weeks to finish and I'm nowhere near where my requirements
+    point. I need to just see if I can search a browser page or something, but then I run into CORS issue.
+    One option is to build something like the one from the link below that searches another file deposited in the program directory
+    and which is prepared in a certain format.

@@ -8,6 +8,7 @@ export class TakeInput extends React.Component{
     constructor(props)
     {
         super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             user: {
                 fpath: props.fpath,
@@ -43,12 +44,7 @@ export class TakeInput extends React.Component{
     handleSubmit = (event) => {
         event.preventDefault();
         
-        const response = ServiceUser.createUsers().then(response =>
-        {
-            console.log(response)
-        }).catch(error=> {
-            console.log(error)
-        })
+        
     };
     render()
     {
